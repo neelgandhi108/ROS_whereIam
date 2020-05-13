@@ -1,6 +1,6 @@
 # RoboND-Term1-P3-Where-Am-I
 Project 3 of Udacity Robotics Software Engineer Nanodegree Program
-![Overview](/videos/Term1-Project3-Where-Am-I-Demo_2.gif)  
+
 ## Overview  
 In this project you'll utilize ROS AMCL package to accurately localize a mobile robot inside a map in the Gazebo simulation environments. Here are the steps to learn several aspects of robotic software engineering with a focus on ROS:  
 * Create a ROS package that launches a custom robot model in a custom Gazebo world  
@@ -154,7 +154,7 @@ Directory Structure
 ## Run the project  
 * Clone this repository
 ```
-git clone https://github.com/jinchaolu/RoboND-Term1-P3-Where-Am-I.git
+https://github.com/neelgandhi108/ROS_whereIam.git
 ```
 * Open the repository and make  
 ```
@@ -186,51 +186,7 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 You could control your robot by keyboard commands now.  
 
-## Tips  
-1. It's recommended to update and upgrade your environment before running the code.  
-```bash
-sudo apt-get update && sudo apt-get upgrade -y
-```
-2. You might need to generate the map again because of the size.  
-Please refer to [Map_Setup.md](/Map_Setup.md) to generate your map step-by-step.  
-3. When you see this error:  
-[request_publisher-2] process has died [pid 7531, exit code -6, cmd /home/nvidia/Documents/github/RoboND-Term1-P3-Where-Am-I/catkin_ws/devel/lib/pgm_map_creator/request_publisher (-30,30)(30,30)(30,-30)(-30,-30) 5 0.01 /home/nvidia/Documents/github/RoboND-Term1-P3-Where-Am-I/catkin_ws/src/pgm_map_creator/maps/map __name:=request_publisher __log:=/home/nvidia/.ros/log/21ee11ca-411f-11e9-9258-00044bc5f185/request_publisher-2.log].
-log file: /home/nvidia/.ros/log/21ee11ca-411f-11e9-9258-00044bc5f185/request_publisher-2*.log
-
-Please refer to this link to fix it,  
-http://answers.gazebosim.org/question/8928/protobuf-error-for-custom-messages-transport-tutorial/  
-
-Then `catkin_make`  
-Then `source`  
-4. Got an error when launching amcl.launch  
-check the amcl.launch file that you have correctly mapped the topics to the correct published ones  
-```
-<remap to="scan" from="my_robot/laser/scan"/>  
-```
-Figure out amcl node is subscribing which topic? Then do the correct remapping.  
-
-## Code Style  
-Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
-
-## Project Rubric  
-### 1. Basic Requirements  
-#### 1.1 Did the student submit all required files?  
-Yes, he did.   
-### 2. Simulation Setup
-#### 2.1 Did the student set up the simulation environment properly?  
-Yes, he did.  
-#### 2.2 Is the student's simulation setup suitable for the localization task?  
-Yes, it is.  
-### 3. Localization Setup  
-#### 3.1 Did the student correctly build the launch files for localization?  
-Yes, he did.  
-#### 3.2 Did the student properly set the parameters for localization?  
-Yes, he did.  
-### 4. Localization Performance  
-#### 4.1 Is the student's robot able to localize itself?  
-Yes, it is.  
-
-## Videos  
+ ## Videos  
 Too few particles will result into localization failure.  
 ![Demo_1](/videos/Term1-Project3-Where-Am-I-Demo_1.gif)  
 Good run demo 1.  
